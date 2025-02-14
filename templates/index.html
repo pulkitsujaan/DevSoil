@@ -207,6 +207,7 @@ header input {
         font-size: 21px;
         font-weight: bold;
         color: #333;
+        text-wrap: wrap;
         }
 
         .regional-name {
@@ -320,7 +321,10 @@ header input {
     border: 2px solid white; /* Optional: Adds a border */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2)
     }
-
+    .uploadBtn{
+        background-color: transparent;
+        border: none;
+    }
     .soil img {
         border-radius: 50%;
     }
@@ -369,7 +373,7 @@ header input {
         <div class="locality-container">
             <div class="locality"> <h3>Uttar Pradesh</h3><p class="regional-name">उत्तर प्रदेश</p><img src="/static/images/States/26Uttarpradesh.avif" alt="Image"></div>
             <div class="locality"> <h3>Punjab</h3><p class="regional-name">ਪੰਜਾਬ</p><img src="/static/images/States/20Punjab.avif" alt="Image"></div>
-            <div class="locality"> <h3>Gujrat</h3><p class="regional-name">ગુજરાત</p><img src="/static/images/States/07Gujrat.avif" alt="Image"></div>
+            <div class="locality"> <h3>Gujarat</h3><p class="regional-name">ગુજરાત</p><img src="/static/images/States/07Gujrat.avif" alt="Image"></div>
             <div class="locality"> <h3>Haryana</h3><p class="regional-name">हरियाणा</p><img src="/static/images/States/08Haryana.avif" alt="Image"></div>
             <div class="locality"> <h3>West Bengal</h3><p class="regional-name">পশ্চিমবঙ্গ</p><img src="/static/images/States/28WestBengal.avif" alt="Image"></div>
             <div class="locality"> <h3>Madhya Pradesh</h3><p class="regional-name">मध्यप्रदेश</p><img src="/static/images/States/13Madhya.avif" alt="Image"></div>
@@ -404,7 +408,11 @@ header input {
         </div>
     </section>
     <div class="fixed-image">
-        <img src="/static/images/camera.png" alt="Floating Icon">
+        <button class="uploadBtn" id="uploadBtn">
+            <img src="/static/images/camera.png" alt="Floating Icon">
+        </button>
+        <input type="file" id="fileInput" style="display: none;" />
     </div>
+    <script src="/static/js/script.js"></script>
 </body>
 </html>

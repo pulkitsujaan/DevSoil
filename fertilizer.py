@@ -11,7 +11,7 @@ def classify_soil(row):
     sand, clay, silt, om, caco3, fe = row["Sand %"], row["Clay %"], row["Silt %"], row["O.M. %"], row["CACO3 %"], row["Fe ppm"]
     
     if sand > 40 and silt >= 30:
-        return "Alluvial Soil"
+        return "Alluvial"
     elif clay > 30 and caco3 > 2:
         return "Black Soil"
     elif clay > 35 and sand < 40:
@@ -55,11 +55,11 @@ def process_soil_data(df):
 
 def suggest_fertilizers(row):
     fertilizers = {
-        "N_NO3 ppm": ["Urea", "Ammonium Nitrate", "Compost", "Blood Meal", "Fish Emulsion"],
-        "P ppm": ["Single Super Phosphate (SSP)", "Di-Ammonium Phosphate (DAP)", "Bone Meal", "Rock Phosphate", "Poultry Manure"],
-        "K ppm": ["Muriate of Potash (MOP)", "Sulfate of Potash (SOP)", "Wood Ash", "K-Mag", "Compost Tea"],
-        "Zn ppm": ["Zinc Sulfate", "Chelated Zinc", "Zinc Oxide", "Organic Zinc Foliar Sprays", "Zinc-Enriched Compost"],
-        "O.M. %": ["Compost", "Manure", "Peat Moss", "Cover Crops", "Biofertilizers"]
+        "N_NO3 ppm": ["Urea - Provides nitrogen essential for leafy growth", "Ammonium Nitrate - Quickly available nitrogen source", "Compost - Organic nitrogen boost", "Blood Meal - High nitrogen content", "Fish Emulsion - Natural nitrogen fertilizer"],
+        "P ppm": ["Single Super Phosphate (SSP) - Boosts root development", "Di-Ammonium Phosphate (DAP) - Provides phosphorus and nitrogen", "Bone Meal - Slow-release phosphorus", "Rock Phosphate - Long-lasting phosphorus source", "Poultry Manure - Organic phosphorus source"],
+        "K ppm": ["Muriate of Potash (MOP) - Increases plant vigor", "Sulfate of Potash (SOP) - Improves disease resistance", "Wood Ash - Provides potassium naturally", "K-Mag - Contains potassium and magnesium", "Compost Tea - Organic potassium supplement"],
+        "Zn ppm": ["Zinc Sulfate - Corrects zinc deficiency", "Chelated Zinc - Easily absorbed zinc source", "Zinc Oxide - Improves plant enzyme function", "Organic Zinc Foliar Sprays - Fast-acting zinc supplementation", "Zinc-Enriched Compost - Provides slow-release zinc"],
+        "O.M. %": ["Compost - Improves soil structure and moisture retention", "Manure - Boosts organic matter and nutrients", "Peat Moss - Enhances soil aeration", "Cover Crops - Increases soil fertility", "Biofertilizers - Enhances microbial activity"]
     }
     deficiency = {}
     for nutrient, status in zip(fertilizers.keys(), [row[f"{nutrient} Status"] for nutrient in fertilizers]):

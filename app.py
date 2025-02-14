@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, url_for, redirect
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -8,7 +8,13 @@ from PIL import Image
 import io
 import os
 
+from fertilizer import load_data,process_soil_data,get_soil_info
+
 app = Flask(__name__)
+
+file_path = "dataset/fertilizer/data.xlsx"
+df = load_data(file_path)
+df_filtered = process_soil_data(df)
 
 class CustomCNN(nn.Module):
     def __init__(self):
@@ -76,7 +82,14 @@ def predict():
     prediction = class_names[predicted_class]
 
     # return render_template("result.html", prediction=prediction)
+    soil_info = get_soil_info(df_filtered,prediction)
+    print(soil_info)
     return jsonify({"Soil Type":prediction}) 
+    # return redirect(url_for('result'),prediction)
+
+
+# After prediction fertilizers
+
 
 if __name__ == "__main__":
     app.run(debug=True)
