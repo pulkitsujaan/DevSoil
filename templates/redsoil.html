@@ -3,10 +3,666 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Easy Kheti</title>
+    <!-- <link rel="stylesheet" href="/static/css/style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins&family=Rubik+Glitch&display=swap" rel="stylesheet">
+
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: #ebebeb;
+    color: #333;
+    text-align: center;
+    padding: 60px;
+}
+
+header {
+    background-color: rgb(10, 116, 7);
+    padding: 20px;
+    color: white;
+}
+
+header input {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.hero {
+    padding: 50px 20px;
+    background-color: rgb(10, 116, 7);
+    color: white;
+}
+
+.heading {
+    font-size: 40px;
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: rrgb(10, 116, 7);
+            color: white;
+            padding: 15px;
+        }
+        .hero {
+            background-color: #f8f8f8;
+            padding: 50px;
+        }
+        .hero {
+    background: url('/static/images/bg.jpg') center/cover no-repeat;
+    padding: 50px;
+    color: white;
+    text-align: center;
+    position: relative;
+    min-height: 40vh;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(190, 189, 189, 0.5); /* Adjust transparency */
+    z-index: 1;
+}
+
+.hero h2 {
+    position: relative;
+    z-index: 2; /* Keeps text above the overlay */
+}
+
+
+        .popular-localities {
+            padding: 20px;
+        }
+        .locality-container, .extra-localities {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 22px;
+        }
+        .locality {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: left;
+            width: calc(33.333% - 20px);
+            height: 200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .locality img {
+
+            height: 90%;
+            border-radius: 8px;
+            object-fit: cover;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .see-more, .see-less {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .extra-localities {
+            display: none;
+        }
+        .extra-localities.show {
+            display: flex;
+        }
+        .see-less {
+            width: 100%;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .locality {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        text-align: left;
+        width: calc(50% - 20px);
+        height: 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        overflow: hidden; /* Ensures text doesn’t overflow */
+        }
+        .locality1 {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        text-align: left;
+        width: calc(33.3% - 20px);
+        height: 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        overflow: hidden; /* Ensures text doesn’t overflow */
+        }
+        .locality h3 {
+        position: absolute;
+        top: 24px;
+        left: 21px;
+        background: rgba(255, 255, 255, 0.7); /* Light background for readability */
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 21px;
+        font-weight: bold;
+        color: #333;
+        }
+
+        .regional-name {
+        position: absolute;
+        top: 60px;
+        left: 21px;
+        background: rgba(255, 255, 255, 0.7);
+        padding: 3px 8px;
+        border-radius: 5px;
+        font-size: 21px;
+        font-weight: normal;
+        color: #444;
+        /* font-style: italic; */
+}
+
+        .locality img {
+        height: 90%;
+        border-radius: 8px;
+        object-fit: cover;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        }
+
+        .locality, .collection {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .locality:hover, .collection:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    
+        @media (max-width: 1128px) { 
+    .locality-container {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center-align */
+    }
+
+    .locality {
+        width: 90%; /* Take most of the screen width */
+        flex-direction: column; /* Stack text and image inside */
+        height: auto; /* Adjust height dynamically */
+        text-align: center;
+        align-items: center;
+        padding: 15px;
+        position: relative;
+    }
+
+    .locality img {
+        position: static; /* Remove absolute positioning */
+        transform: none;
+        width: 60%; /* Keep image responsive */
+        height: auto;
+        margin-top: 10px; /* Space between text and image */
+    }
+
+    .locality h3, 
+    .regional-name {
+        position: static; /* Remove absolute positioning */
+        background: none; /* Optional: remove background */
+        text-align: center;
+    }
+}
+
+@media (max-width: 466px) { 
+    .locality-container {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center-align */
+    }
+
+    .locality {
+        width: 90%; /* Take most of the screen width */
+        flex-direction: column; /* Stack text and image inside */
+        height: auto; /* Adjust height dynamically */
+        text-align: center;
+        align-items: center;
+        padding: 15px;
+        position: relative;
+    }
+
+    .locality img {
+        position: static; /* Remove absolute positioning */
+        transform: none;
+        width: 40%; /* Keep image responsive */
+        height: auto;
+        margin-top: 10px; /* Space between text and image */
+    }
+
+    .locality h3, 
+    .regional-name {
+        position: static; /* Remove absolute positioning */
+        background: none; /* Optional: remove background */
+        text-align: center;
+    }
+}
+
+
+    .fixed-image {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px; /* Set width of the image */
+    height: 100px; /* Set height */
+    z-index: 9999; /* Keep it above everything */
+    }
+
+    .fixed-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure proper scaling */
+    cursor: pointer; /* Makes it clickable */
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white; /* Optional: Adds a border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2)
+    }
+
+    .soil img {
+        border-radius: 50%;
+    }
+    /* General navbar styling */
+nav {
+    background-color: rgb(10, 116, 7);
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+nav ul li:not(:last-child)::after {
+    content: "|";
+    color: white;
+    margin-left: 35px;
+}
+
+a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    /* transform: scale(1.1); */
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+
+.abc {
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.cont {
+    background-color: rgb(255, 255, 255);
+    margin: 2%;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    padding: 40px 0; /* Increased padding for height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 160px;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    text-align: center;
+}
+
+.footer-left img {
+    width: 120px; /* Bigger image */
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    gap: 15px;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* Bigger text */
+    font-weight: bold;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.locality:active {
+    animation: bounce 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h2 {
+    animation: slideIn 1s ease-in-out;
+}
+
+button {
+    background-color: rgb(10, 116, 7);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: rgb(8, 90, 5);
+    transform: scale(1.1);
+}
+
+header img {
+    size: 10%;
+}
+
+
+    </style>
+
+    <script>
+        function toggleExtraLocalities() {
+            const extraLocalities = document.querySelector('.extra-localities');
+            const seeMore = document.querySelector('.see-more');
+            const seeLess = document.querySelector('.see-less');
+            
+            if (extraLocalities.classList.contains('show')) {
+                extraLocalities.classList.remove('show');
+                seeMore.style.display = 'flex';
+                seeLess.style.display = 'none';
+            } else {
+                extraLocalities.classList.add('show');
+                seeMore.style.display = 'none';
+                seeLess.style.display = 'flex';
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+        const elements = document.querySelectorAll('.fade-in');
+
+        function checkVisibility() {
+        elements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 50) {
+                el.classList.add('show');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // Run once on page load
+});
+
+    </script>
 </head>
 <body>
-    <img src="" alt="" id="soilImg">
+    
+    <header class="mainheading">
+        <a style="background-color: transparent;" href="/"><img width="60px" src="/static/images/logo.png" alt="Logo"></a>
+        <h1 class="heading">Easy Kheti</h1>
+        <!-- <img src="/static/images/logo1.png" alt=""> -->
+        
+    </header>
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="">Home</a></li> 
+            <li><a href="#mainsoil">Soil</a></li> 
+            <li><a href="#mainstate">Region</a></li> 
+            <li><a href="#maincrop">Crops</a></li> 
+            <li><a href="#mainfooter">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="cont">
+    <section class="popular-localities" id = "mainsoil">
+        <h2 class="abc">Select By Soil Type</h2>
+        <div class="locality-container">
+            <div class="locality soil" onclick="this.classList.add('bounce')"> <h3>Alluvial Soil</h3><p class="regional-name">उजलोढ़ मिट्टी</p><img src="/static/images/Soil/Alluvial (1).jpg" alt="Image"></div>
+            <div class="locality soil" onclick="this.classList.add('bounce')"> <h3>Black Soil</h3><p class="regional-name">काली मिट्टी/रेगुर</p><img src="/static/images/Soil/Black (1).jpg" alt="Image"></div>
+        </div>
+        </section>
+    </div>
+
+
+    <div class="cont" id = "mainstate">
+    <section class="popular-localities">
+        <h2 class="abc">Select By Reigon/State</h2>
+        <div class="locality-container">
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Paddy</h3><p class="regional-name">धान</p><img src="/static/images/images2/R (1).jpg" alt="Image"></div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Wheat</h3><p class="regional-name">गेहूं</p><img src="/static/images/images2/wheat (1).jpg" alt="Image"></div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Sugarcane</h3><p class="regional-name">गन्ना</p><img src="/static/images/images2/sugercane (1) (1).jpg" alt="Image"></div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Urea</h3><p class="regional-name">यूरिया</p> <a href="https://www.tradeindia.com/products/urea-8119091.html" target="_blank"> <img src="/static/images/fertilizer/urea (1).jpg" alt="Image"> </a></div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>DAP</h3><p class="regional-name">डीएपी</p> <a href="https://www.mystore.in/en/product/dap-6" target="_blank"><img src="/static/images/fertilizer/dap (1).jpg" alt="Image"></a> </div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Compost</h3><p class="regional-name"> जैविक खाद</p> <a href="https://www.aajjo.com/product/city-compost-fertilizer-for-agriculture-in-anand-msaf-bio-organics-pvt-pvt" target="_blank"> <img src="/static/images/fertilizer/compost (1).jpg" alt="Image"> </a></div>
+        </div>
+    </section>
+ </div>
+
+    <div class="cont" id = "maincrop">
+    <section class="popular-localities">
+        <h2 class="abc">Select By Crop</h2>
+        <div class="locality-container">
+            <div class="locality1" onclick="this.classList.add('bounce')">
+                <iframe 
+        width="500" 
+        height="260" 
+        src="https://www.youtube.com/embed/7uE4A1XY5yg" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+        </iframe>
+            </div>
+            <div class="locality1" onclick="this.classList.add('bounce')"><iframe 
+                width="500" 
+                height="260" 
+                src="https://www.youtube.com/embed/zB_AFCoDlDg?si=gpBh-A8x8a0OSfma" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+                </iframe></div>
+            <div class="locality1" onclick="this.classList.add('bounce')">
+                <iframe 
+        width="500" 
+        height="260" 
+        src="https://www.youtube.com/embed/Lzvld_ict9g?si=HtCVFMspkuP_vTnr" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+        </iframe>
+            </div>
+            <div class="locality1" onclick="this.classList.add('bounce')">
+                <iframe 
+        width="500" 
+        height="260" 
+        src="https://www.youtube.com/embed/4CUYogghtnY?si=vGthv3NCsf4kprxY" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+        </iframe>
+            </div>
+            <div class="locality1" onclick="this.classList.add('bounce')">
+                <iframe 
+        width="500" 
+        height="260" 
+        src="https://www.youtube.com/embed/SQaDeJbozdg?si=9DE9MtmyK9n7yFBe" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+        </iframe>
+            </div>
+            <div class="locality1" onclick="this.classList.add('bounce')"><iframe 
+                width="500" 
+                height="260" 
+                src="https://www.youtube.com/embed/7sXjBa-YPhs?si=7i3gxkGkF_QkqS9c" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+                </iframe></div>
+        </div>
+    </section>
+</div>
+
+<div class="cont" id = "mainstate">
+    <section class="popular-localities">
+        <h2 class="abc">Select By Reigon/State</h2>
+        <div class="locality-container">
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Paddy</h3><p class="regional-name">धान</p><img src="/static/images/images2/R (1).jpg" alt="Image"></div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Wheat</h3><p class="regional-name">गेहूं</p><img src="/static/images/images2/wheat (1).jpg" alt="Image"></div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Sugarcane</h3><p class="regional-name">गन्ना</p><img src="/static/images/images2/sugercane (1) (1).jpg" alt="Image"></div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Urea</h3><p class="regional-name">यूरिया</p> <a href="https://www.tradeindia.com/products/urea-8119091.html" target="_blank"> <img src="/static/images/fertilizer/urea (1).jpg" alt="Image"> </a></div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>DAP</h3><p class="regional-name">डीएपी</p> <a href="https://www.mystore.in/en/product/dap-6" target="_blank"><img src="/static/images/fertilizer/dap (1).jpg" alt="Image"></a> </div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Compost</h3><p class="regional-name"> जैविक खाद</p> <a href="https://www.aajjo.com/product/city-compost-fertilizer-for-agriculture-in-anand-msaf-bio-organics-pvt-pvt" target="_blank"> <img src="/static/images/fertilizer/compost (1).jpg" alt="Image"> </a></div>
+        </div>
+    </section>
+ </div>
+
+<footer id = "mainfooter">
+    <div class="footer-container">
+        <div class="footer-left">
+            <img src="/static/images/logo.jpg" alt="Logo">
+        </div>
+        <div class="footer-right">
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+            <a href="#">Know More</a>
+            <a href="#">Support</a>
+        </div>
+    </div>
+</footer>
+
+
+    <div class="fixed-image">
+        <img src="/static/images/camera.png" alt="Floating Icon">
+    </div>
     <script>
         let uploadedImage = sessionStorage.getItem("uploadedImage");
         document.getElementById("soilImg").src = uploadedImage;

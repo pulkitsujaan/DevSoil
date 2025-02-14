@@ -4,12 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy Kheti</title>
-    <!-- <link rel="stylesheet" href="/static/css/style.css"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins&family=Rubik+Glitch&display=swap" rel="stylesheet">
-
-
+    <!-- <link rel="stylesheet" href="styles.css"> -->
     <style>
         * {
     margin: 0;
@@ -482,7 +477,6 @@ header img {
 
 
     </style>
-
     <script>
         function toggleExtraLocalities() {
             const extraLocalities = document.querySelector('.extra-localities');
@@ -521,21 +515,24 @@ header img {
 <body>
     
     <header class="mainheading">
-        <a style="background-color: transparent;" href="/"><img width="60px" src="/static/images/logo.png" alt="Logo"></a>
-        <h1 class="heading">Easy Kheti</h1>
+        <h1 class="heading">Farming Education</h1>
         <!-- <img src="/static/images/logo1.png" alt=""> -->
-        
+        <input type="text" placeholder="Search for reigon, crop, soil...">
     </header>
     <nav class="sticky-nav">
         <ul>
-            <li><a href="">Home</a></li> 
+            <li><a href="#">Home</a></li> 
+            <li><a href="#maincrop">Crops</a></li> 
             <li><a href="#mainsoil">Soil</a></li> 
             <li><a href="#mainstate">Region</a></li> 
-            <li><a href="#maincrop">Crops</a></li> 
             <li><a href="#mainfooter">Contact</a></li>
         </ul>
     </nav>
     
+    <section class="hero fade-in">
+        <h2>Discover the best farming</h2>
+    </section>
+
     <div class="cont">
     <section class="popular-localities" id = "mainsoil">
         <h2 class="abc">Select By Soil Type</h2>
@@ -663,9 +660,5 @@ header img {
     <div class="fixed-image">
         <img src="/static/images/camera.png" alt="Floating Icon">
     </div>
-    <script>
-        let uploadedImage = sessionStorage.getItem("uploadedImage");
-        document.getElementById("soilImg").src = uploadedImage;
-    </script>
 </body>
 </html>

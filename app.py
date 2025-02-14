@@ -80,7 +80,7 @@ def predict():
     # return redirect(url_for('result'),prediction)
 
 
-# After prediction fertilizers
+# After prediction results
 @app.route("/blacksoil")
 def blackSoil():
     return render_template("blacksoil.html")

@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmication</title>
+    <title>Easy Kheti</title>
     <link rel="stylesheet" href="/static/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins&family=Rubik+Glitch&display=swap" rel="stylesheet">
+
     <script>
         function toggleExtraLocalities() {
             const extraLocalities = document.querySelector('.extra-localities');
@@ -43,32 +48,38 @@
 <body>
     
     <header class="mainheading">
-        <h1 class="heading">Farming Education</h1>
+        <a style="background-color: transparent;" href="/"><img width="60px" src="/static/images/logo.png" alt="Logo"></a>
+        <h1 class="heading">Easy Kheti</h1>
         <!-- <img src="/static/images/logo1.png" alt=""> -->
-        <input type="text" placeholder="Search for reigon, crop, soil...">
+        
     </header>
     <nav class="sticky-nav">
         <ul>
-            <li><a href="#">Home</a></li> 
-            <li><a href="#maincrop">Crops</a></li> 
+            <li><a href="">Home</a></li> 
             <li><a href="#mainsoil">Soil</a></li> 
             <li><a href="#mainstate">Region</a></li> 
+            <li><a href="#maincrop">Crops</a></li> 
             <li><a href="#mainfooter">Contact</a></li>
         </ul>
     </nav>
     
     <section class="hero fade-in">
-        <h2>Discover the best farming</h2>
+        <h1>Discover the best farming</h1>
+        <h2>Upload an image of your soil to get detailed insights</h2>
+
+    <button class="upload-large uploadBtn" id="uploadBtn">
+        Upload Your Sample
+    </button>
     </section>
     <div class="cont">
 
     <section class="popular-localities" id = "mainsoil">
         <h2 class="abc">Select By Soil Type</h2>
         <div class="locality-container">
-            <div class="locality soil" onclick="this.classList.add('bounce')"> <h3>Alluvial Soil</h3><p class="regional-name">उजलोढ़ मिट्टी</p><img src="/static/images/Soil/Alluvial (1).jpg" alt="Image"></div>
-            <div class="locality soil" onclick="this.classList.add('bounce')"> <h3>Black Soil</h3><p class="regional-name">काली मिट्टी/रेगुर</p><img src="/static/images/Soil/Black (1).jpg" alt="Image"></div>
-            <div class="locality soil" onclick="this.classList.add('bounce')"> <h3>Clay Soil</h3><p class="regional-name">करैली मिट्टी</p><img src="/static/images/Soil/Clay (1).jpg" alt="Image"></div>
-            <div class="locality soil" onclick="this.classList.add('bounce')"> <h3>Red Soil</h3><p class="regional-name">लाल मिट्टी</p><img src="/static/images/Soil/Red (1).jpg" alt="Image"></div>
+            <div class="locality soil" onclick="this.classList.add('bounce')"> <a href="alluvialsoil"><h3>Alluvial Soil</h3><p class="regional-name">उजलोढ़ मिट्टी</p><img src="/static/images/Soil/Alluvial (1).jpg" alt="Image"></a></div>
+            <div class="locality soil" onclick="this.classList.add('bounce')"> <a href="blacksoil"><h3>Black Soil</h3>><p class="regional-name">काली मिट्टी/रेगुर</p><img src="/static/images/Soil/Black (1).jpg" alt="Image"></a></div>
+            <div class="locality soil" onclick="this.classList.add('bounce')"> <a href="claysoil"><h3>Clay Soil</h3><p class="regional-name">करैली मिट्टी</p><img src="/static/images/Soil/Clay (1).jpg" alt="Image"></a></div>
+            <div class="locality soil" onclick="this.classList.add('bounce')"> <a href="redsoil"><h3>Red Soil</h3><p class="regional-name">लाल मिट्टी</p><img src="/static/images/Soil/Red (1).jpg" alt="Image"></a></div>
         </div>
         </section>
     </div>
@@ -78,7 +89,7 @@
         <div class="locality-container">
             <div class="locality" onclick="this.classList.add('bounce')"> <h3>Uttar Pradesh</h3><p class="regional-name">उत्तर प्रदेश</p><img src="/static/images/States/26Uttarpradesh.avif" alt="Image"></div>
             <div class="locality" onclick="this.classList.add('bounce')"> <h3>Punjab</h3><p class="regional-name">ਪੰਜਾਬ</p><img src="/static/images/States/20Punjab.avif" alt="Image"></div>
-            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Gujrat</h3><p class="regional-name">ગુજરાત</p><img src="/static/images/States/07Gujrat.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Gujarat</h3><p class="regional-name">ગુજરાત</p><img src="/static/images/States/07Gujrat.avif" alt="Image"></div>
             <div class="locality" onclick="this.classList.add('bounce')"> <h3>Haryana</h3><p class="regional-name">हरियाणा</p><img src="/static/images/States/08Haryana.avif" alt="Image"></div>
             <div class="locality" onclick="this.classList.add('bounce')"> <h3>West Bengal</h3><p class="regional-name">পশ্চিমবঙ্গ</p><img src="/static/images/States/28WestBengal.avif" alt="Image"></div>
             <div class="locality" onclick="this.classList.add('bounce')"> <h3>Madhya Pradesh</h3><p class="regional-name">मध्यप्रदेश</p><img src="/static/images/States/13Madhya.avif" alt="Image"></div>
@@ -130,7 +141,7 @@
 <footer id = "mainfooter">
     <div class="footer-container">
         <div class="footer-left">
-            <img src="/static/images/logo.jpg" alt="Logo">
+            <img src="/static/images/logo.png" alt="Logo">
         </div>
         <div class="footer-right">
             <a href="#">Contact Us</a>
