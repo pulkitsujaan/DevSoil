@@ -80,12 +80,3 @@ def get_soil_info(df_filtered, soil_type):
         "Silt %": float(sample["Silt %"]),
         "Fertilizer Recommendations": deficiency
     }
-
-if __name__ == "__main__":
-    file_path = "dataset/fertilizer/data.xlsx"  # Update with actual file path
-    df = load_data(file_path)
-    df_filtered = process_soil_data(df)
-    
-    soil_type_input = input("Enter soil type (Alluvial, Black Soil, Clay Soil, Red Soil): ")
-    soil_info = get_soil_info(df_filtered, soil_type_input)
-    print(soil_info)

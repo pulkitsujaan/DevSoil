@@ -8,13 +8,8 @@ from PIL import Image
 import io
 import os
 
-from fertilizer import load_data,process_soil_data,get_soil_info
 
 app = Flask(__name__)
-
-file_path = "dataset/fertilizer/data.xlsx"
-df = load_data(file_path)
-df_filtered = process_soil_data(df)
 
 class CustomCNN(nn.Module):
     def __init__(self):
@@ -81,15 +76,23 @@ def predict():
     class_names = ["Alluvial Soil", "Black Soil", "Clay Soil", "Red Soil"]
     prediction = class_names[predicted_class]
 
-    # return render_template("result.html", prediction=prediction)
-    soil_info = get_soil_info(df_filtered,prediction)
-    print(soil_info)
     return jsonify({"Soil Type":prediction}) 
     # return redirect(url_for('result'),prediction)
 
 
 # After prediction fertilizers
-
+@app.route("/blacksoil")
+def blackSoil():
+    return render_template("blacksoil.html")
+@app.route("/redsoil")
+def redSoil():
+    return render_template("redsoil.html")
+@app.route("/alluvialsoil")
+def alluvialSoil():
+    return render_template("alluvialsoil.html")
+@app.route("/claysoil")
+def claySoil():
+    return render_template("claysoil.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

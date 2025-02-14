@@ -4,332 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farmication</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
-    <style>
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #f8f8f8;
-    color: #333;
-    text-align: center;
-}
-
-header {
-    background-color: rgb(28, 211, 119);
-    padding: 20px;
-    color: white;
-}
-
-header input {
-    padding: 10px;
-    width: 80%;
-    max-width: 400px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-.hero {
-    padding: 50px 20px;
-    background-color: rgb(28, 211, 119);
-    color: white;
-}
-
-.restaurants {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.restaurant {
-    background-color: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 200px;
-    text-align: center;
-}
-
-.restaurant img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* Collections Section */
-.collections {
-    text-align: center;
-    padding: 40px 5%;
-    background-color: #fff;
-}
-
-.collections h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.collections p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-/* Center aligning the collection container */
-.collection-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.collection {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    overflow: hidden;
-    text-align: center;
-}
-
-.collection img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-}
-
-.collection h3 {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.collection p {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 10px;
-}
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background-color: rgb(28, 211, 119);
-            color: white;
-            padding: 15px;
-        }
-        .hero {
-            background-color: #f8f8f8;
-            padding: 50px;
-        }
-        .restaurants, .collections, .popular-localities {
-            padding: 20px;
-        }
-        .collection-container, .locality-container, .extra-localities {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-        .collection, .locality {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: left;
-            width: calc(33.333% - 20px);
-            height: 200px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-        }
-        .collection img, .locality img {
-
-            height: 90%;
-            border-radius: 8px;
-            object-fit: cover;
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        .see-more, .see-less {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 15px;
-        }
-        .extra-localities {
-            display: none;
-        }
-        .extra-localities.show {
-            display: flex;
-        }
-        .see-less {
-            width: 100%;
-            justify-content: center;
-            margin-top: 10px;
-        }
-        .locality {
-        background: white;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        text-align: left;
-        width: calc(33.333% - 20px);
-        height: 200px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        overflow: hidden; /* Ensures text doesn’t overflow */
-        }
-
-        .locality h3 {
-        position: absolute;
-        top: 24px;
-        left: 21px;
-        background: rgba(255, 255, 255, 0.7); /* Light background for readability */
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 21px;
-        font-weight: bold;
-        color: #333;
-        text-wrap: wrap;
-        }
-
-        .regional-name {
-        position: absolute;
-        top: 60px;
-        left: 21px;
-        background: rgba(255, 255, 255, 0.7);
-        padding: 3px 8px;
-        border-radius: 5px;
-        font-size: 21px;
-        font-weight: normal;
-        color: #444;
-        /* font-style: italic; */
-}
-
-        .locality img {
-        height: 90%;
-        border-radius: 8px;
-        object-fit: cover;
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: auto;
-        }
-    
-        @media (max-width: 1128px) { 
-    .locality-container {
-        display: flex;
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center; /* Center-align */
-    }
-
-    .locality {
-        width: 90%; /* Take most of the screen width */
-        flex-direction: column; /* Stack text and image inside */
-        height: auto; /* Adjust height dynamically */
-        text-align: center;
-        align-items: center;
-        padding: 15px;
-        position: relative;
-    }
-
-    .locality img {
-        position: static; /* Remove absolute positioning */
-        transform: none;
-        width: 60%; /* Keep image responsive */
-        height: auto;
-        margin-top: 10px; /* Space between text and image */
-    }
-
-    .locality h3, 
-    .regional-name {
-        position: static; /* Remove absolute positioning */
-        background: none; /* Optional: remove background */
-        text-align: center;
-    }
-}
-
-@media (max-width: 466px) { 
-    .locality-container {
-        display: flex;
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center; /* Center-align */
-    }
-
-    .locality {
-        width: 90%; /* Take most of the screen width */
-        flex-direction: column; /* Stack text and image inside */
-        height: auto; /* Adjust height dynamically */
-        text-align: center;
-        align-items: center;
-        padding: 15px;
-        position: relative;
-    }
-
-    .locality img {
-        position: static; /* Remove absolute positioning */
-        transform: none;
-        width: 40%; /* Keep image responsive */
-        height: auto;
-        margin-top: 10px; /* Space between text and image */
-    }
-
-    .locality h3, 
-    .regional-name {
-        position: static; /* Remove absolute positioning */
-        background: none; /* Optional: remove background */
-        text-align: center;
-    }
-}
-
-
-    .fixed-image {
-    position: fixed;
-    bottom: 20px; /* Distance from the bottom */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px; /* Set width of the image */
-    height: 100px; /* Set height */
-    z-index: 9999; /* Keep it above everything */
-    }
-
-    .fixed-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Ensure proper scaling */
-    cursor: pointer; /* Makes it clickable */
-    border-radius: 50%;
-    cursor: pointer;
-    border: 2px solid white; /* Optional: Adds a border */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2)
-    }
-    .uploadBtn{
-        background-color: transparent;
-        border: none;
-    }
-    .soil img {
-        border-radius: 50%;
-    }
-
-    </style>
+    <link rel="stylesheet" href="/static/css/style.css">
     <script>
         function toggleExtraLocalities() {
             const extraLocalities = document.querySelector('.extra-localities');
@@ -346,73 +21,133 @@ header input {
                 seeLess.style.display = 'flex';
             }
         }
+
+        document.addEventListener("DOMContentLoaded", function() {
+        const elements = document.querySelectorAll('.fade-in');
+
+        function checkVisibility() {
+        elements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 50) {
+                el.classList.add('show');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // Run once on page load
+});
+
     </script>
 </head>
 <body>
-    <header>
-        <h1>Farming Education</h1>
+    
+    <header class="mainheading">
+        <h1 class="heading">Farming Education</h1>
+        <!-- <img src="/static/images/logo1.png" alt=""> -->
         <input type="text" placeholder="Search for reigon, crop, soil...">
     </header>
-    <section class="hero">
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="#">Home</a></li> 
+            <li><a href="#maincrop">Crops</a></li> 
+            <li><a href="#mainsoil">Soil</a></li> 
+            <li><a href="#mainstate">Region</a></li> 
+            <li><a href="#mainfooter">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section class="hero fade-in">
         <h2>Discover the best farming</h2>
     </section>
+    <div class="cont">
 
-    <section class="popular-localities">
-        <h2>Select By Soil Type</h2>
+    <section class="popular-localities" id = "mainsoil">
+        <h2 class="abc">Select By Soil Type</h2>
         <div class="locality-container">
-            <div class="locality soil"> <h3>Alluvial Soil</h3><p class="regional-name">उजलोढ़ मिट्टी</p><img src="/static/images/Soil/Alluvial (1).jpg" alt="Image"></div>
-            <div class="locality soil"> <h3>Black Soil</h3><p class="regional-name">काली मिट्टी/रेगुर</p><img src="/static/images/Soil/Black (1).jpg" alt="Image"></div>
-            <div class="locality soil"> <h3>Clay Soil</h3><p class="regional-name">करैली मिट्टी</p><img src="/static/images/Soil/Clay (1).jpg" alt="Image"></div>
-            <div class="locality soil"> <h3>Red Soil</h3><p class="regional-name">लाल मिट्टी</p><img src="/static/images/Soil/Red (1).jpg" alt="Image"></div>
+            <div class="locality soil" onclick="this.classList.add('bounce')"> <h3>Alluvial Soil</h3><p class="regional-name">उजलोढ़ मिट्टी</p><img src="/static/images/Soil/Alluvial (1).jpg" alt="Image"></div>
+            <div class="locality soil" onclick="this.classList.add('bounce')"> <h3>Black Soil</h3><p class="regional-name">काली मिट्टी/रेगुर</p><img src="/static/images/Soil/Black (1).jpg" alt="Image"></div>
+            <div class="locality soil" onclick="this.classList.add('bounce')"> <h3>Clay Soil</h3><p class="regional-name">करैली मिट्टी</p><img src="/static/images/Soil/Clay (1).jpg" alt="Image"></div>
+            <div class="locality soil" onclick="this.classList.add('bounce')"> <h3>Red Soil</h3><p class="regional-name">लाल मिट्टी</p><img src="/static/images/Soil/Red (1).jpg" alt="Image"></div>
         </div>
-    </section>
-
-
+        </section>
+    </div>
+    <div class="cont" id = "mainstate">
     <section class="popular-localities">
-        <h2>Select By Reigon/State</h2>
+        <h2 class="abc">Select By Reigon/State</h2>
         <div class="locality-container">
-            <div class="locality"> <h3>Uttar Pradesh</h3><p class="regional-name">उत्तर प्रदेश</p><img src="/static/images/States/26Uttarpradesh.avif" alt="Image"></div>
-            <div class="locality"> <h3>Punjab</h3><p class="regional-name">ਪੰਜਾਬ</p><img src="/static/images/States/20Punjab.avif" alt="Image"></div>
-            <div class="locality"> <h3>Gujarat</h3><p class="regional-name">ગુજરાત</p><img src="/static/images/States/07Gujrat.avif" alt="Image"></div>
-            <div class="locality"> <h3>Haryana</h3><p class="regional-name">हरियाणा</p><img src="/static/images/States/08Haryana.avif" alt="Image"></div>
-            <div class="locality"> <h3>West Bengal</h3><p class="regional-name">পশ্চিমবঙ্গ</p><img src="/static/images/States/28WestBengal.avif" alt="Image"></div>
-            <div class="locality"> <h3>Madhya Pradesh</h3><p class="regional-name">मध्यप्रदेश</p><img src="/static/images/States/13Madhya.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Uttar Pradesh</h3><p class="regional-name">उत्तर प्रदेश</p><img src="/static/images/States/26Uttarpradesh.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Punjab</h3><p class="regional-name">ਪੰਜਾਬ</p><img src="/static/images/States/20Punjab.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Gujrat</h3><p class="regional-name">ગુજરાત</p><img src="/static/images/States/07Gujrat.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Haryana</h3><p class="regional-name">हरियाणा</p><img src="/static/images/States/08Haryana.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>West Bengal</h3><p class="regional-name">পশ্চিমবঙ্গ</p><img src="/static/images/States/28WestBengal.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Madhya Pradesh</h3><p class="regional-name">मध्यप्रदेश</p><img src="/static/images/States/13Madhya.avif" alt="Image"></div>
         </div>
         <div class="see-more" onclick="toggleExtraLocalities()">See More ▼</div>
         <div class="extra-localities">
-            <div class="locality"> <h3>Andhra Pradesh</h3><p class="regional-name">ఆంధ్ర ప్రదేశ్</p><img src="/static/images/States/01Andhra.avif" alt="Image"></div>
-            <div class="locality"> <h3>Arunachal Pradesh</h3><p class="regional-name">अरुणाचल प्रदेश</p><img src="/static/images/States/02Arunachal.avif" alt="Image"></div>
-            <div class="locality"> <h3>Assam</h3><p class="regional-name">অসম</p><img src="/static/images/States/03Assam.avif" alt="Image"></div>
-            <div class="locality"> <h3>Bihar</h3><p class="regional-name">बिहार</p><img src="/static/images/States/04Bihar.avif" alt="Image"></div>
-            <div class="locality"> <h3>Chhattisgarh</h3><p class="regional-name">छत्तीसगढ़</p><img src="/static/images/States/05Chattisgarh.avif" alt="Image"></div>
-            <div class="locality"> <h3>Goa</h3><p class="regional-name">गोंय</p><img src="/static/images/States/06Goa.avif" alt="Image"></div>
-            <div class="locality"> <h3>Himachal Pradesh</h3><p class="regional-name">हिमाचल प्रदेश</p><img src="/static/images/States/09Himachal.avif" alt="Image"></div>
-            <div class="locality"> <h3>Jharkhand</h3><p class="regional-name">झारखंड</p><img src="/static/images/States/10Jharkhand.avif" alt="Image"></div>
-            <div class="locality"> <h3>Karnataka</h3><p class="regional-name">ಕರ್ನಾಟಕ </p><img src="/static/images/States/11Karnataka.avif" alt="Image"></div>
-            <div class="locality"> <h3>Kerala</h3><p class="regional-name">കേരളം</p><img src="/static/images/States/12Kerala.avif" alt="Image"></div>
-            <div class="locality"> <h3>Maharastra</h3><p class="regional-name">महाराष्ट्र</p><img src="/static/images/States/14Maharastra.avif" alt="Image"></div>
-            <div class="locality"> <h3>Manipur</h3><p class="regional-name">মণিপুর</p><img src="/static/images/States/15Manipur.avif" alt="Image"></div>
-            <div class="locality"> <h3>Meghalaya</h3><p class="regional-name">মেঘালয়</p><img src="/static/images/States/16Mehghalaya.avif" alt="Image"></div>
-            <div class="locality"> <h3>Mizoram</h3><p class="regional-name">Mizo ṭawng</p><img src="/static/images/States/17Mizoram.avif" alt="Image"></div>
-            <div class="locality"> <h3>Nagaland</h3><p class="regional-name">Nagamese</p><img src="/static/images/States/18Nagaland.avif" alt="Image"></div>
-            <div class="locality"> <h3>Odisha</h3><p class="regional-name">ଓଡ଼ିଶା</p><img src="/static/images/States/19Odisha.avif" alt="Image"></div>
-            <div class="locality"> <h3>Rajasthan</h3><p class="regional-name">राजस्थान</p><img src="/static/images/States/21Rajasthan.avif" alt="Image"></div>
-            <div class="locality"> <h3>Sikkim</h3><p class="regional-name">सिक्किम</p><img src="/static/images/States/22Sikkim.avif" alt="Image"></div>
-            <div class="locality"> <h3>Tamil Nadu</h3><p class="regional-name">தமிழ்நாடு</p><img src="/static/images/States/23Tamil.avif" alt="Image"></div>
-            <div class="locality"> <h3>Telangana</h3><p class="regional-name">తెలంగాణ</p><img src="/static/images/States/24Telengana.avif" alt="Image"></div>
-            <div class="locality"> <h3>Tripura</h3><p class="regional-name">ত্রিপুরা</p><img src="/static/images/States/25Tripura.avif" alt="Image"></div>
-            <div class="locality"> <h3>Uttarakhand</h3><p class="regional-name">उत्तराखण्ड</p><img src="/static/images/States/27Uttarakhand.avif" alt="Image"></div>
-            <div class="locality"> <h3>Jammu Kashmir</h3><p class="regional-name">جموں و کشمیر</p><img src="/static/images/States/29JK.avif" alt="Image"></div>
-            <div class="locality"> <h3>Delhi</h3><p class="regional-name">दिल्ली</p><img src="/static/images/States/30Delhi.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Andhra Pradesh</h3><p class="regional-name">ఆంధ్ర ప్రదేశ్</p><img src="/static/images/States/01Andhra.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Arunachal Pradesh</h3><p class="regional-name">अरुणाचल प्रदेश</p><img src="/static/images/States/02Arunachal.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Assam</h3><p class="regional-name">অসম</p><img src="/static/images/States/03Assam.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Bihar</h3><p class="regional-name">बिहार</p><img src="/static/images/States/04Bihar.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Chhattisgarh</h3><p class="regional-name">छत्तीसगढ़</p><img src="/static/images/States/05Chattisgarh.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Goa</h3><p class="regional-name">गोंय</p><img src="/static/images/States/06Goa.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Himachal Pradesh</h3><p class="regional-name">हिमाचल प्रदेश</p><img src="/static/images/States/09Himachal.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Jharkhand</h3><p class="regional-name">झारखंड</p><img src="/static/images/States/10Jharkhand.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Karnataka</h3><p class="regional-name">ಕರ್ನಾಟಕ </p><img src="/static/images/States/11Karnataka.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Kerala</h3><p class="regional-name">കേരളം</p><img src="/static/images/States/12Kerala.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Maharastra</h3><p class="regional-name">महाराष्ट्र</p><img src="/static/images/States/14Maharastra.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Manipur</h3><p class="regional-name">মণিপুর</p><img src="/static/images/States/15Manipur.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Meghalaya</h3><p class="regional-name">মেঘালয়</p><img src="/static/images/States/16Mehghalaya.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Mizoram</h3><p class="regional-name">Mizo ṭawng</p><img src="/static/images/States/17Mizoram.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Nagaland</h3><p class="regional-name">Nagamese</p><img src="/static/images/States/18Nagaland.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Odisha</h3><p class="regional-name">ଓଡ଼ିଶା</p><img src="/static/images/States/19Odisha.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Rajasthan</h3><p class="regional-name">राजस्थान</p><img src="/static/images/States/21Rajasthan.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Sikkim</h3><p class="regional-name">सिक्किम</p><img src="/static/images/States/22Sikkim.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Tamil Nadu</h3><p class="regional-name">தமிழ்நாடு</p><img src="/static/images/States/23Tamil.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Telangana</h3><p class="regional-name">తెలంగాణ</p><img src="/static/images/States/24Telengana.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Tripura</h3><p class="regional-name">ত্রিপুরা</p><img src="/static/images/States/25Tripura.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Uttarakhand</h3><p class="regional-name">उत्तराखण्ड</p><img src="/static/images/States/27Uttarakhand.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Jammu Kashmir</h3><p class="regional-name">جموں و کشمیر</p><img src="/static/images/States/29JK.avif" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Delhi</h3><p class="regional-name">दिल्ली</p><img src="/static/images/States/30Delhi.avif" alt="Image"></div>
             <div class="see-less" onclick="toggleExtraLocalities()" style="display: none;">See Less ▲</div>
         </div>
     </section>
-    <div class="fixed-image">
-        <button class="uploadBtn" id="uploadBtn">
-            <img src="/static/images/camera.png" alt="Floating Icon">
-        </button>
-        <input type="file" id="fileInput" style="display: none;" />
+ </div>
+
+    <div class="cont" id = "maincrop">
+    <section class="popular-localities">
+        <h2 class="abc">Select By Crop</h2>
+        <div class="locality-container">
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Paddy</h3><p class="regional-name">धान</p><img src="/static/images/Crops/rice.jpg" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Pulses</h3><p class="regional-name">दालें</p><img src="/static/images/Crops/pulse (1).jpg" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Cotton</h3><p class="regional-name">कपास</p><img src="/static/images/Crops/cotton (1).jpg" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Jute</h3><p class="regional-name">जूट</p><img src="/static/images/Crops/Jute-fiber (1).jpg" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Wheat</h3><p class="regional-name">गेहूं</p><img src="/static/images/Crops/wheat (1).jpg" alt="Image"></div>
+            <div class="locality" onclick="this.classList.add('bounce')"> <h3>Sugarcane</h3><p class="regional-name">गन्ना</p><img src="/static/images/Crops/sugercane (1).jpg" alt="Image"></div>
+        </div>
+    </section>
+</div>
+<footer id = "mainfooter">
+    <div class="footer-container">
+        <div class="footer-left">
+            <img src="/static/images/logo.jpg" alt="Logo">
+        </div>
+        <div class="footer-right">
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+            <a href="#">Know More</a>
+            <a href="#">Support</a>
+        </div>
     </div>
-    <script src="/static/js/script.js"></script>
+</footer>
+
+
+<div class="fixed-image">
+    <button class="uploadBtn" id="uploadBtn">
+        <img src="/static/images/camera.png" alt="Floating Icon">
+    </button>
+    <input type="file" id="fileInput" style="display: none;" />
+</div>
+<script src="/static/js/script.js"></script>
 </body>
 </html>
