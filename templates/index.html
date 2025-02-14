@@ -233,25 +233,27 @@ header input {
         width: auto;
         }
     
-    @media (max-width: 1126px) { /* Adjust breakpoint as needed */
-    .locality-container, .extra-localities {
-        flex-direction: row; /* Stack the divs */
-        align-items: center; /* Center them */
+        @media (max-width: 1128px) { 
+    .locality-container {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center-align */
     }
 
     .locality {
-        width: 300px; /* Set a fixed width */
+        width: 90%; /* Take most of the screen width */
         flex-direction: column; /* Stack text and image inside */
         height: auto; /* Adjust height dynamically */
         text-align: center;
         align-items: center;
         padding: 15px;
+        position: relative;
     }
 
     .locality img {
         position: static; /* Remove absolute positioning */
         transform: none;
-        width: 100%; /* Keep image responsive */
+        width: 60%; /* Keep image responsive */
         height: auto;
         margin-top: 10px; /* Space between text and image */
     }
@@ -263,6 +265,65 @@ header input {
         text-align: center;
     }
 }
+
+@media (max-width: 466px) { 
+    .locality-container {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center-align */
+    }
+
+    .locality {
+        width: 90%; /* Take most of the screen width */
+        flex-direction: column; /* Stack text and image inside */
+        height: auto; /* Adjust height dynamically */
+        text-align: center;
+        align-items: center;
+        padding: 15px;
+        position: relative;
+    }
+
+    .locality img {
+        position: static; /* Remove absolute positioning */
+        transform: none;
+        width: 40%; /* Keep image responsive */
+        height: auto;
+        margin-top: 10px; /* Space between text and image */
+    }
+
+    .locality h3, 
+    .regional-name {
+        position: static; /* Remove absolute positioning */
+        background: none; /* Optional: remove background */
+        text-align: center;
+    }
+}
+
+
+    .fixed-image {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px; /* Set width of the image */
+    height: 100px; /* Set height */
+    z-index: 9999; /* Keep it above everything */
+    }
+
+    .fixed-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure proper scaling */
+    cursor: pointer; /* Makes it clickable */
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white; /* Optional: Adds a border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2)
+    }
+
+    .soil img {
+        border-radius: 50%;
+    }
 
     </style>
     <script>
@@ -291,44 +352,59 @@ header input {
     <section class="hero">
         <h2>Discover the best farming</h2>
     </section>
+
+    <section class="popular-localities">
+        <h2>Select By Soil Type</h2>
+        <div class="locality-container">
+            <div class="locality soil"> <h3>Alluvial Soil</h3><p class="regional-name">उजलोढ़ मिट्टी</p><img src="/static/images/Soil/Alluvial (1).jpg" alt="Image"></div>
+            <div class="locality soil"> <h3>Black Soil</h3><p class="regional-name">काली मिट्टी/रेगुर</p><img src="/static/images/Soil/Black (1).jpg" alt="Image"></div>
+            <div class="locality soil"> <h3>Clay Soil</h3><p class="regional-name">करैली मिट्टी</p><img src="/static/images/Soil/Clay (1).jpg" alt="Image"></div>
+            <div class="locality soil"> <h3>Red Soil</h3><p class="regional-name">लाल मिट्टी</p><img src="/static/images/Soil/Red (1).jpg" alt="Image"></div>
+        </div>
+    </section>
+
+
     <section class="popular-localities">
         <h2>Select By Reigon/State</h2>
         <div class="locality-container">
-            <div class="locality"> <h3>Uttar Pradesh</h3><p class="regional-name">उत्तर प्रदेश</p><img src="States/26Uttarpradesh.avif" alt="Image"></div>
-            <div class="locality"> <h3>Punjab</h3><p class="regional-name">ਪੰਜਾਬ</p><img src="States/20Punjab.avif" alt="Image"></div>
-            <div class="locality"> <h3>Gujrat</h3><p class="regional-name">ગુજરાત</p><img src="States/07Gujrat.avif" alt="Image"></div>
-            <div class="locality"> <h3>Haryana</h3><p class="regional-name">हरियाणा</p><img src="States/08Haryana.avif" alt="Image"></div>
-            <div class="locality"> <h3>West Bengal</h3><p class="regional-name">পশ্চিমবঙ্গ</p><img src="States/28WestBengal.avif" alt="Image"></div>
-            <div class="locality"> <h3>Madhya Pradesh</h3><p class="regional-name">मध्यप्रदेश</p><img src="States/13Madhya.avif" alt="Image"></div>
+            <div class="locality"> <h3>Uttar Pradesh</h3><p class="regional-name">उत्तर प्रदेश</p><img src="/static/images/States/26Uttarpradesh.avif" alt="Image"></div>
+            <div class="locality"> <h3>Punjab</h3><p class="regional-name">ਪੰਜਾਬ</p><img src="/static/images/States/20Punjab.avif" alt="Image"></div>
+            <div class="locality"> <h3>Gujrat</h3><p class="regional-name">ગુજરાત</p><img src="/static/images/States/07Gujrat.avif" alt="Image"></div>
+            <div class="locality"> <h3>Haryana</h3><p class="regional-name">हरियाणा</p><img src="/static/images/States/08Haryana.avif" alt="Image"></div>
+            <div class="locality"> <h3>West Bengal</h3><p class="regional-name">পশ্চিমবঙ্গ</p><img src="/static/images/States/28WestBengal.avif" alt="Image"></div>
+            <div class="locality"> <h3>Madhya Pradesh</h3><p class="regional-name">मध्यप्रदेश</p><img src="/static/images/States/13Madhya.avif" alt="Image"></div>
         </div>
         <div class="see-more" onclick="toggleExtraLocalities()">See More ▼</div>
         <div class="extra-localities">
-            <div class="locality"> <h3>Andhra Pradesh</h3><p class="regional-name">ఆంధ్ర ప్రదేశ్</p><img src="States/01Andhra.avif" alt="Image"></div>
-            <div class="locality"> <h3>Arunachal Pradesh</h3><p class="regional-name">अरुणाचल प्रदेश</p><img src="States/02Arunachal.avif" alt="Image"></div>
-            <div class="locality"> <h3>Assam</h3><p class="regional-name">অসম</p><img src="States/03Assam.avif" alt="Image"></div>
-            <div class="locality"> <h3>Bihar</h3><p class="regional-name">बिहार</p><img src="States/04Bihar.avif" alt="Image"></div>
-            <div class="locality"> <h3>Chhattisgarh</h3><p class="regional-name">छत्तीसगढ़</p><img src="States/05Chattisgarh.avif" alt="Image"></div>
-            <div class="locality"> <h3>Goa</h3><p class="regional-name">गोंय</p><img src="States/06Goa.avif" alt="Image"></div>
-            <div class="locality"> <h3>Himachal Pradesh</h3><p class="regional-name">हिमाचल प्रदेश</p><img src="States/09Himachal.avif" alt="Image"></div>
-            <div class="locality"> <h3>Jharkhand</h3><p class="regional-name">झारखंड</p><img src="States/10Jharkhand.avif" alt="Image"></div>
-            <div class="locality"> <h3>Karnataka</h3><p class="regional-name">ಕರ್ನಾಟಕ </p><img src="States/11Karnataka.avif" alt="Image"></div>
-            <div class="locality"> <h3>Kerala</h3><p class="regional-name">കേരളം</p><img src="States/12Kerala.avif" alt="Image"></div>
-            <div class="locality"> <h3>Maharastra</h3><p class="regional-name">महाराष्ट्र</p><img src="States/14Maharastra.avif" alt="Image"></div>
-            <div class="locality"> <h3>Manipur</h3><p class="regional-name">মণিপুর</p><img src="States/15Manipur.avif" alt="Image"></div>
-            <div class="locality"> <h3>Meghalaya</h3><p class="regional-name">মেঘালয়</p><img src="States/16Mehghalaya.avif" alt="Image"></div>
-            <div class="locality"> <h3>Mizoram</h3><p class="regional-name">Mizo ṭawng</p><img src="States/17Mizoram.avif" alt="Image"></div>
-            <div class="locality"> <h3>Nagaland</h3><p class="regional-name">Nagamese</p><img src="States/18Nagaland.avif" alt="Image"></div>
-            <div class="locality"> <h3>Odisha</h3><p class="regional-name">ଓଡ଼ିଶା</p><img src="States/19Odisha.avif" alt="Image"></div>
-            <div class="locality"> <h3>Rajasthan</h3><p class="regional-name">राजस्थान</p><img src="States/21Rajasthan.avif" alt="Image"></div>
-            <div class="locality"> <h3>Sikkim</h3><p class="regional-name">सिक्किम</p><img src="States/22Sikkim.avif" alt="Image"></div>
-            <div class="locality"> <h3>Tamil Nadu</h3><p class="regional-name">தமிழ்நாடு</p><img src="States/23Tamil.avif" alt="Image"></div>
-            <div class="locality"> <h3>Telangana</h3><p class="regional-name">తెలంగాణ</p><img src="States/24Telengana.avif" alt="Image"></div>
-            <div class="locality"> <h3>Tripura</h3><p class="regional-name">ত্রিপুরা</p><img src="States/25Tripura.avif" alt="Image"></div>
-            <div class="locality"> <h3>Uttarakhand</h3><p class="regional-name">उत्तराखण्ड</p><img src="States/27Uttarakhand.avif" alt="Image"></div>
-            <div class="locality"> <h3>Jammu Kashmir</h3><p class="regional-name">جموں و کشمیر</p><img src="States/29JK.avif" alt="Image"></div>
-            <div class="locality"> <h3>Delhi</h3><p class="regional-name">दिल्ली</p><img src="States/30Delhi.avif" alt="Image"></div>
+            <div class="locality"> <h3>Andhra Pradesh</h3><p class="regional-name">ఆంధ్ర ప్రదేశ్</p><img src="/static/images/States/01Andhra.avif" alt="Image"></div>
+            <div class="locality"> <h3>Arunachal Pradesh</h3><p class="regional-name">अरुणाचल प्रदेश</p><img src="/static/images/States/02Arunachal.avif" alt="Image"></div>
+            <div class="locality"> <h3>Assam</h3><p class="regional-name">অসম</p><img src="/static/images/States/03Assam.avif" alt="Image"></div>
+            <div class="locality"> <h3>Bihar</h3><p class="regional-name">बिहार</p><img src="/static/images/States/04Bihar.avif" alt="Image"></div>
+            <div class="locality"> <h3>Chhattisgarh</h3><p class="regional-name">छत्तीसगढ़</p><img src="/static/images/States/05Chattisgarh.avif" alt="Image"></div>
+            <div class="locality"> <h3>Goa</h3><p class="regional-name">गोंय</p><img src="/static/images/States/06Goa.avif" alt="Image"></div>
+            <div class="locality"> <h3>Himachal Pradesh</h3><p class="regional-name">हिमाचल प्रदेश</p><img src="/static/images/States/09Himachal.avif" alt="Image"></div>
+            <div class="locality"> <h3>Jharkhand</h3><p class="regional-name">झारखंड</p><img src="/static/images/States/10Jharkhand.avif" alt="Image"></div>
+            <div class="locality"> <h3>Karnataka</h3><p class="regional-name">ಕರ್ನಾಟಕ </p><img src="/static/images/States/11Karnataka.avif" alt="Image"></div>
+            <div class="locality"> <h3>Kerala</h3><p class="regional-name">കേരളം</p><img src="/static/images/States/12Kerala.avif" alt="Image"></div>
+            <div class="locality"> <h3>Maharastra</h3><p class="regional-name">महाराष्ट्र</p><img src="/static/images/States/14Maharastra.avif" alt="Image"></div>
+            <div class="locality"> <h3>Manipur</h3><p class="regional-name">মণিপুর</p><img src="/static/images/States/15Manipur.avif" alt="Image"></div>
+            <div class="locality"> <h3>Meghalaya</h3><p class="regional-name">মেঘালয়</p><img src="/static/images/States/16Mehghalaya.avif" alt="Image"></div>
+            <div class="locality"> <h3>Mizoram</h3><p class="regional-name">Mizo ṭawng</p><img src="/static/images/States/17Mizoram.avif" alt="Image"></div>
+            <div class="locality"> <h3>Nagaland</h3><p class="regional-name">Nagamese</p><img src="/static/images/States/18Nagaland.avif" alt="Image"></div>
+            <div class="locality"> <h3>Odisha</h3><p class="regional-name">ଓଡ଼ିଶା</p><img src="/static/images/States/19Odisha.avif" alt="Image"></div>
+            <div class="locality"> <h3>Rajasthan</h3><p class="regional-name">राजस्थान</p><img src="/static/images/States/21Rajasthan.avif" alt="Image"></div>
+            <div class="locality"> <h3>Sikkim</h3><p class="regional-name">सिक्किम</p><img src="/static/images/States/22Sikkim.avif" alt="Image"></div>
+            <div class="locality"> <h3>Tamil Nadu</h3><p class="regional-name">தமிழ்நாடு</p><img src="/static/images/States/23Tamil.avif" alt="Image"></div>
+            <div class="locality"> <h3>Telangana</h3><p class="regional-name">తెలంగాణ</p><img src="/static/images/States/24Telengana.avif" alt="Image"></div>
+            <div class="locality"> <h3>Tripura</h3><p class="regional-name">ত্রিপুরা</p><img src="/static/images/States/25Tripura.avif" alt="Image"></div>
+            <div class="locality"> <h3>Uttarakhand</h3><p class="regional-name">उत्तराखण्ड</p><img src="/static/images/States/27Uttarakhand.avif" alt="Image"></div>
+            <div class="locality"> <h3>Jammu Kashmir</h3><p class="regional-name">جموں و کشمیر</p><img src="/static/images/States/29JK.avif" alt="Image"></div>
+            <div class="locality"> <h3>Delhi</h3><p class="regional-name">दिल्ली</p><img src="/static/images/States/30Delhi.avif" alt="Image"></div>
             <div class="see-less" onclick="toggleExtraLocalities()" style="display: none;">See Less ▲</div>
         </div>
     </section>
+    <div class="fixed-image">
+        <img src="/static/images/camera.png" alt="Floating Icon">
+    </div>
 </body>
 </html>
