@@ -528,7 +528,7 @@ header img {
     </header>
     <nav class="sticky-nav">
         <ul>
-            <li><a href="">Home</a></li> 
+            <li><a href="/">Home</a></li> 
             <li><a href="#mainsoil">Soil</a></li> 
             <li><a href="#mainstate">Region</a></li> 
             <li><a href="#maincrop">Crops</a></li> 
@@ -537,110 +537,115 @@ header img {
     </nav>
     
     <div class="cont">
-    <section class="popular-localities" id = "mainsoil">
-        <h2 class="abc">Select By Soil Type</h2>
-        <div class="locality-container">
-            <div class="locality soil" onclick="this.classList.add('bounce')"> <h3>Alluvial Soil</h3><p class="regional-name">उजलोढ़ मिट्टी</p><img src="/static/images/Soil/Alluvial (1).jpg" alt="Image"></div>
-            <div class="locality soil" onclick="this.classList.add('bounce')"> <h3>Black Soil</h3><p class="regional-name">काली मिट्टी/रेगुर</p><img src="/static/images/Soil/Black (1).jpg" alt="Image"></div>
-        </div>
-        </section>
-    </div>
-
-
-    <div class="cont" id = "mainstate">
-    <section class="popular-localities">
-        <h2 class="abc">Select By Reigon/State</h2>
-        <div class="locality-container">
-            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Paddy</h3><p class="regional-name">धान</p><img src="/static/images/images2/R (1).jpg" alt="Image"></div>
-            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Wheat</h3><p class="regional-name">गेहूं</p><img src="/static/images/images2/wheat (1).jpg" alt="Image"></div>
-            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Sugarcane</h3><p class="regional-name">गन्ना</p><img src="/static/images/images2/sugercane (1) (1).jpg" alt="Image"></div>
-            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Urea</h3><p class="regional-name">यूरिया</p> <a href="https://www.tradeindia.com/products/urea-8119091.html" target="_blank"> <img src="/static/images/fertilizer/urea (1).jpg" alt="Image"> </a></div>
-            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>DAP</h3><p class="regional-name">डीएपी</p> <a href="https://www.mystore.in/en/product/dap-6" target="_blank"><img src="/static/images/fertilizer/dap (1).jpg" alt="Image"></a> </div>
-            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Compost</h3><p class="regional-name"> जैविक खाद</p> <a href="https://www.aajjo.com/product/city-compost-fertilizer-for-agriculture-in-anand-msaf-bio-organics-pvt-pvt" target="_blank"> <img src="/static/images/fertilizer/compost (1).jpg" alt="Image"> </a></div>
-        </div>
-    </section>
- </div>
-
-    <div class="cont" id = "maincrop">
-    <section class="popular-localities">
-        <h2 class="abc">Select By Crop</h2>
-        <div class="locality-container">
-            <div class="locality1" onclick="this.classList.add('bounce')">
-                <iframe 
-        width="500" 
-        height="260" 
-        src="https://www.youtube.com/embed/7uE4A1XY5yg" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen>
-        </iframe>
+        <section class="popular-localities" id = "mainsoil">
+            <h2 class="abc">Selected Soil Type (चयनित मिट्टी का प्रकार)</h2>
+            <div class="locality-container">
+                <div class="locality soil" onclick="this.classList.add('bounce')"> <h3 style="padding-left: 10%; padding-top: 60px; font-size: 49px;">Black Soil</h3><img src="/static/images/Soil/Black (1).jpg" alt="Image"></div>
+                <div class="locality soil text1" onclick="this.classList.add('bounce')"><p class="text1" style="font-size: large; text-align: center;">काली मिट्टी, जिसे रेगुर मिट्टी भी कहा जाता है, इसमें अधिक मात्रा में चिकनी मिट्टी होती है और यह नमी को बनाए रखती है, जिससे यह कपास की खेती के लिए उपयुक्त होती है। यह मुख्य रूप से भारत के दक्कन पठार में पाई जाती है।<br><br>
+                    Black soil, also known as Regur soil, is rich in clay and moisture-retentive, making it ideal for cotton cultivation. It is mainly found in the Deccan Plateau of India.
+                </p></div>
             </div>
-            <div class="locality1" onclick="this.classList.add('bounce')"><iframe 
+            </section>
+        </div>
+
+
+        <div class="cont" id = "mainstate">
+            <section class="popular-localities">
+                <h2 class="abc">Suitable Crops And Fertilizers (उपयुक्त फसलें और उर्वरक)</h2>
+                <div class="locality-container">
+                    <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Cotton</h3><p class="regional-name">कपास</p><img src="/static/images/images2/cotton (1).jpg" alt="Image"></div>
+                    <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Millets</h3><p class="regional-name">मिलेट्स</p><img src="/static/images/Crops/millet.png" alt="Image"></div>
+                    <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Sugarcane</h3><p class="regional-name">गन्ना</p><img src="/static/images/images2/sugercane (1) (1).jpg" alt="Image"></div>
+                    <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Urea</h3><p class="regional-name">यूरिया</p> <a href="https://www.tradeindia.com/products/urea-8119091.html" target="_blank"> <img src="/static/images/fertilizer/urea (1).jpg" alt="Image"> </a></div>
+                    <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>DAP</h3><p class="regional-name">डीएपी</p> <a href="https://www.mystore.in/en/product/dap-6" target="_blank"><img src="/static/images/fertilizer/dap (1).jpg" alt="Image"></a> </div>
+                    <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Compost</h3><p class="regional-name"> जैविक खाद</p> <a href="https://www.aajjo.com/product/city-compost-fertilizer-for-agriculture-in-anand-msaf-bio-organics-pvt-pvt" target="_blank"> <img src="/static/images/fertilizer/compost (1).jpg" alt="Image"> </a></div>
+                </div>
+            </section>
+         </div>
+        
+            <div class="cont" id = "maincrop">
+            <section class="popular-localities">
+                <h2 class="abc">Modern Farming Techniques (आधुनिक कृषि तकनीकें)</h2>
+                <div class="locality-container">
+                    <div class="locality1" onclick="this.classList.add('bounce')">
+                        <iframe 
                 width="500" 
                 height="260" 
-                src="https://www.youtube.com/embed/zB_AFCoDlDg?si=gpBh-A8x8a0OSfma" 
+                src="https://www.youtube.com/embed/Wz6-4Gd7AyU?si=0tJItEkgHbf3AnEE" 
                 title="YouTube video player" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowfullscreen>
-                </iframe></div>
-            <div class="locality1" onclick="this.classList.add('bounce')">
-                <iframe 
-        width="500" 
-        height="260" 
-        src="https://www.youtube.com/embed/Lzvld_ict9g?si=HtCVFMspkuP_vTnr" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen>
-        </iframe>
-            </div>
-            <div class="locality1" onclick="this.classList.add('bounce')">
-                <iframe 
-        width="500" 
-        height="260" 
-        src="https://www.youtube.com/embed/4CUYogghtnY?si=vGthv3NCsf4kprxY" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen>
-        </iframe>
-            </div>
-            <div class="locality1" onclick="this.classList.add('bounce')">
-                <iframe 
-        width="500" 
-        height="260" 
-        src="https://www.youtube.com/embed/SQaDeJbozdg?si=9DE9MtmyK9n7yFBe" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen>
-        </iframe>
-            </div>
-            <div class="locality1" onclick="this.classList.add('bounce')"><iframe 
+                </iframe>
+                    </div>
+                    <div class="locality1" onclick="this.classList.add('bounce')"><iframe 
+                        width="500" 
+                        height="260" 
+                        src="https://www.youtube.com/embed/kyODj-ovp4E?si=vW0qfWg-3GpscG-l" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                        </iframe></div>
+                    <div class="locality1" onclick="this.classList.add('bounce')">
+                        <iframe 
                 width="500" 
                 height="260" 
-                src="https://www.youtube.com/embed/7sXjBa-YPhs?si=7i3gxkGkF_QkqS9c" 
+                src="https://www.youtube.com/embed/HVDA9Eo4OwM?si=J-XTSHWYxA0Lef8Q" 
                 title="YouTube video player" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowfullscreen>
-                </iframe></div>
+                </iframe>
+                    </div>
+                    <div class="locality1" onclick="this.classList.add('bounce')">
+                        <iframe 
+                width="500" 
+                height="260" 
+                src="https://www.youtube.com/embed/RFnx5fgs5Ys?si=INW7VccoWGfkqXM-" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+                </iframe>
+                    </div>
+                    <div class="locality1" onclick="this.classList.add('bounce')">
+                        <iframe 
+                width="500" 
+                height="260" 
+                src="https://www.youtube.com/embed/SQaDeJbozdg?si=9DE9MtmyK9n7yFBe" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+                </iframe>
+                    </div>
+                    <div class="locality1" onclick="this.classList.add('bounce')"><iframe 
+                        width="500" 
+                        height="260" 
+                        src="https://www.youtube.com/embed/7sXjBa-YPhs?si=7i3gxkGkF_QkqS9c" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                        </iframe></div>
+                </div>
+            </section>
         </div>
-    </section>
-</div>
 
-<div class="cont" id = "mainstate">
+<<div class="cont" id = "mainstate">
     <section class="popular-localities">
-        <h2 class="abc">Select By Reigon/State</h2>
+        <h2 class="abc">Modern Equipments (आधुनिक कृषि उपकरण)</h2>
         <div class="locality-container">
-            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Paddy</h3><p class="regional-name">धान</p><img src="/static/images/images2/R (1).jpg" alt="Image"></div>
-            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Wheat</h3><p class="regional-name">गेहूं</p><img src="/static/images/images2/wheat (1).jpg" alt="Image"></div>
-            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Sugarcane</h3><p class="regional-name">गन्ना</p><img src="/static/images/images2/sugercane (1) (1).jpg" alt="Image"></div>
-            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Urea</h3><p class="regional-name">यूरिया</p> <a href="https://www.tradeindia.com/products/urea-8119091.html" target="_blank"> <img src="/static/images/fertilizer/urea (1).jpg" alt="Image"> </a></div>
-            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>DAP</h3><p class="regional-name">डीएपी</p> <a href="https://www.mystore.in/en/product/dap-6" target="_blank"><img src="/static/images/fertilizer/dap (1).jpg" alt="Image"></a> </div>
-            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Compost</h3><p class="regional-name"> जैविक खाद</p> <a href="https://www.aajjo.com/product/city-compost-fertilizer-for-agriculture-in-anand-msaf-bio-organics-pvt-pvt" target="_blank"> <img src="/static/images/fertilizer/compost (1).jpg" alt="Image"> </a></div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Soil Cultivator</h3><p class="regional-name">₹58000</p> <a href="https://www.aajjo.com/product/shovel-type-red-manku-9-tynes-soil-cultivator-in-hanumangarh-manku-repairing-works" target="_blank"> <img src="/static/images/new_equipment/Soil-Cultivator-1500x1000 (1).jpg" alt="Image"> </a></div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Transplanter</h3><p class="regional-name">₹545000</p> <a href="https://www.aajjo.com/product/walking-type-shaktiman-rice-transplanter-paddy-ropak-637-for-agriculture-farming-in-mumbai-sabin-enterprises" target="_blank"><img src="/static/images/new_equipment/rice_transplanter (1).jpg" alt="Image"></a> </div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Wheat Processor</h3><p class="regional-name">₹90000</p> <a href="https://www.tradeindia.com/products/wheat-processing-machines-2971489.html" target="_blank"> <img src="/static/images/new_equipment/manual_working_tractor (2).jpg" alt="Image"> </a></div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Sugar Harvester</h3><p class="regional-name">₹200000</p> <a href="https://www.tradeindia.com/products/sugarcane-harvester-machine-c9181055.html" target="_blank"> <img src="/static/images/new_equipment/3520-Sugarcane-Harvesters (1).jpg" alt="Image"> </a></div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Bud Cutter</h3><p class="regional-name">₹1799</p> <a href="https://www.amazon.in/MAXAGRO-Sugarcane-Bud-Cutter-Agriculture/dp/B0BVMVJHVQ?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A1XM1NPQAHGDZL" target="_blank"><img src="/static/images/new_equipment/51pNrtff0LL._SL1323_ (1).jpg" alt="Image"></a> </div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Rotavator</h3><p class="regional-name">₹60000</p> <a href="https://www.tradeindia.com/products/sugercane-rotavator-c7868858.html" target="_blank"> <img src="/static/images/new_equipment/sugarcane_rota (1).jpg" alt="Image"> </a></div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Cotton Sower</h3><p class="regional-name">₹7500</p> <a href="https://www.aajjo.com/product/really-12teeth-seeder-cotton-seed-sowing-machine-for-agriculture-size-12-teeth-in-thane-really-agritech-private-limited" target="_blank"> <img src="/static/images/new_equipment/cotton_sowing (1).jpg" alt="Image"> </a></div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Cotton Picker</h3><p class="regional-name">₹5350000</p> <a href="https://www.tradeindia.com/products/cotton-picking-machine-5554197.html" target="_blank"><img src="/static/images/new_equipment/cotton_picking (1).jpg" alt="Image"></a> </div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Hand Hoe</h3><p class="regional-name">₹349</p> <a href="https://trudeliver.com/products/hectare-traditional-farm-garden-single-hoe-agriculture-hand-hoe-kussy-equipment-tool-for-gardenin?sku_id=53577464" target="_blank"> <img src="/static/images/new_equipment/ahh (1).jpg" alt="Image"> </a></div>
         </div>
     </section>
  </div>
@@ -648,7 +653,7 @@ header img {
 <footer id = "mainfooter">
     <div class="footer-container">
         <div class="footer-left">
-            <img src="/static/images/logo.jpg" alt="Logo">
+            <img src="/static/images/logo.png" alt="Logo">
         </div>
         <div class="footer-right">
             <a href="#">Contact Us</a>
@@ -658,14 +663,12 @@ header img {
         </div>
     </div>
 </footer>
-
-
-    <div class="fixed-image">
+<div class="fixed-image">
+    <button style="background-color: transparent; border: none;" class="uploadBtn" id="uploadBtn">
         <img src="/static/images/camera.png" alt="Floating Icon">
-    </div>
-    <script>
-        let uploadedImage = sessionStorage.getItem("uploadedImage");
-        document.getElementById("soilImg").src = uploadedImage;
-    </script>
+    </button>
+    <input type="file" id="fileInput" style="display: none;" />
+</div>
+<script src="/static/js/script.js"></script>
 </body>
 </html>

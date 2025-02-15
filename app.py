@@ -81,18 +81,52 @@ def predict():
 
 
 # After prediction results
+@app.route("/predictB")
+def blackSoil_predict():
+    return render_template("blacksoil_predict.html")
+@app.route("/predictR")
+def redSoil_predict():
+    return render_template("redsoil_predict.html")
+@app.route("/predictA")
+def alluvialSoil_predict():
+    return render_template("alluvialsoil_predict.html")
+@app.route("/predictC")
+def claySoil_predict():
+    return render_template("claysoil_predict.html")
+
+
 @app.route("/blacksoil")
 def blackSoil():
-    return render_template("blacksoil.html")
+    return render_template("blacksoil_predict.html")
 @app.route("/redsoil")
 def redSoil():
-    return render_template("redsoil.html")
+    return render_template("redsoil_predict.html")
 @app.route("/alluvialsoil")
 def alluvialSoil():
-    return render_template("alluvialsoil.html")
+    return render_template("alluvialsoil_predict.html")
 @app.route("/claysoil")
 def claySoil():
-    return render_template("claysoil.html")
+    return render_template("claysoil_predict.html")
+
+
+
+@app.route("/AlluvialState")
+def alluvialState():
+    return render_template("AlluvialState.html")
+
+@app.route("/BlackState")
+def blackState():
+    return render_template("BlackState.html")
+
+@app.route("/RedState")
+def redState():
+    return render_template("RedState.html")
+
+@app.route("/ClayState")
+def clayState():
+    return render_template("ClayState.html")
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)

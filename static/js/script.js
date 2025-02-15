@@ -1,7 +1,11 @@
 // Trigger file explorer when the upload button is clicked
-document.getElementById("uploadBtn").addEventListener("click", function() {
-    document.getElementById("fileInput").click();
-});
+const upload_buttons=document.querySelectorAll("#uploadBtn")
+    upload_buttons.forEach(button => {
+      button.addEventListener("click", function() {
+        document.getElementById("fileInput").click();
+    });
+        
+    });
 
 // Handle the file selection event
 document.getElementById("fileInput").addEventListener("change", function() {
@@ -41,16 +45,16 @@ document.getElementById("fileInput").addEventListener("change", function() {
 
 
         if(prediction_string=='Black Soil'){
-            window.location.href = "/blacksoil";
+            window.location.href = "/predictB";
         }
         if(prediction_string=='Alluvial Soil'){
-            window.location.href = "/alluvialsoil";
+            window.location.href = "/predictA";
         }
         if(prediction_string=='Red Soil'){
-            window.location.href = "/redsoil";
+            window.location.href = "/predictR";
         }
         if(prediction_string=='Clay Soil'){
-            window.location.href = "/claysoil";
+            window.location.href = "/predictC";
         }
 
         // Redirect to result.html
@@ -60,7 +64,74 @@ document.getElementById("fileInput").addEventListener("change", function() {
         console.error("Error during file upload:", error);
         alert("Error processing the image.");
     });
-});
+}); 
 
 
 
+
+  const alluvail_states = document.querySelectorAll('.alluvial-state');
+  
+  // Loop through each div and add an event listener
+  alluvail_states.forEach(div => {
+      div.addEventListener('click', function() {
+        let imageElement = div.querySelector('img');
+      // Store the clicked div's text in sessionStorage
+      sessionStorage.setItem('stateName', div.querySelector('h3').innerText);
+      sessionStorage.setItem('statePic', imageElement.src);
+      window.location.href = '/AlluvialState';
+    });
+
+})
+  const black_states = document.querySelectorAll('.black-state');
+  
+  // Loop through each div and add an event listener
+  black_states.forEach(div => {
+      div.addEventListener('click', function() {
+        let imageElement = div.querySelector('img');
+      // Store the clicked div's text in sessionStorage
+      sessionStorage.setItem('stateName', div.querySelector('h3').innerText);
+      sessionStorage.setItem('statePic', imageElement.src);
+      window.location.href = '/BlackState';
+    });
+  })
+  const red_states = document.querySelectorAll('.red-state');
+  
+  // Loop through each div and add an event listener
+  red_states.forEach(div => {
+      div.addEventListener('click', function() {
+        let imageElement = div.querySelector('img');
+      // Store the clicked div's text in sessionStorage
+      sessionStorage.setItem('stateName', div.querySelector('h3').innerText);
+      sessionStorage.setItem('statePic', imageElement.src);
+      window.location.href = '/RedState';
+    });
+  })
+  const clay_states = document.querySelectorAll('.clay-state');
+  
+  // Loop through each div and add an event listener
+  clay_states.forEach(div => {
+      div.addEventListener('click', function() {
+        let imageElement = div.querySelector('img');
+      // Store the clicked div's text in sessionStorage
+      sessionStorage.setItem('stateName', div.querySelector('h3').innerText);
+      sessionStorage.setItem('statePic', imageElement.src);
+      window.location.href = '/ClayState';
+    })})
+
+
+
+
+
+//prediction pages
+    const alluvial_predict = document.querySelectorAll('.alluvial-state');
+  
+    // Loop through each div and add an event listener
+    alluvial_predict.forEach(div => {
+        div.addEventListener('click', function() {
+      
+        // Store the clicked div's text in sessionStorage
+        sessionStorage.setItem('stateName', div.querySelector('h3').innerText);
+        sessionStorage.setItem('statePic', imageElement.src);
+        window.location.href = '/predictA';
+      })
+    });

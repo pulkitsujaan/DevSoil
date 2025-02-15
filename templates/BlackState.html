@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmication</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>Easy Kheti</title>
+    <!-- <link rel="stylesheet" href="/static/css/style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins&family=Rubik+Glitch&display=swap" rel="stylesheet">
+
+
     <style>
         * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -476,7 +481,10 @@ header img {
 }
 
 
+
+
     </style>
+
     <script>
         function toggleExtraLocalities() {
             const extraLocalities = document.querySelector('.extra-localities');
@@ -515,41 +523,41 @@ header img {
 <body>
     
     <header class="mainheading">
-        <h1 class="heading">Farming Education</h1>
+        <a style="background-color: transparent;" href="/"><img width="60px" src="/static/images/logo.png" alt="Logo"></a>
+        <h1 class="heading">Easy Kheti</h1>
         <!-- <img src="/static/images/logo1.png" alt=""> -->
-        <input type="text" placeholder="Search for reigon, crop, soil...">
+        
     </header>
     <nav class="sticky-nav">
         <ul>
-            <li><a href="#">Home</a></li> 
-            <li><a href="#maincrop">Crops</a></li> 
+            <li><a href="/">Home</a></li> 
             <li><a href="#mainsoil">Soil</a></li> 
             <li><a href="#mainstate">Region</a></li> 
+            <li><a href="#maincrop">Crops</a></li> 
             <li><a href="#mainfooter">Contact</a></li>
         </ul>
     </nav>
     
-    <section class="hero fade-in">
-        <h2>Discover the best farming</h2>
-    </section>
-
     <div class="cont">
     <section class="popular-localities" id = "mainsoil">
-        <h2 class="abc">Select By Soil Type</h2>
+        <h2 class="abc">Selected State (चयनित राज्य)</h2>
         <div class="locality-container">
-            <div class="locality soil" onclick="this.classList.add('bounce')"> <h3>Alluvial Soil</h3><p class="regional-name">उजलोढ़ मिट्टी</p><img src="/static/images/Soil/Alluvial (1).jpg" alt="Image"></div>
-            <div class="locality soil" onclick="this.classList.add('bounce')"> <h3>Black Soil</h3><p class="regional-name">काली मिट्टी/रेगुर</p><img src="/static/images/Soil/Black (1).jpg" alt="Image"></div>
+            <div class="locality soil stateName" onclick="this.classList.add('bounce')"> <h3 style="padding-left: 10%; padding-top: 70px; font-size: 46px;"></h3>
+                <img src="" alt="Image"></div>
+            <div class="locality soil text1" onclick="this.classList.add('bounce')"><p class="text1" style="font-size: large; text-align: center;">जलोढ़ मिट्टी एक उपजाऊ मिट्टी है जो नदियों द्वारा जमा की जाती है, जो खनिजों से भरपूर और कृषि के लिए आदर्श होती है। यह आमतौर पर गंगा-यमुना के मैदानों जैसे नदी घाटियों में पाई जाती है।<br><br>
+                Alluvial soil is a fertile soil type deposited by rivers, rich in minerals and ideal for agriculture. It is commonly found in river plains like the Indo-Gangetic plain
+            </p></div>
         </div>
         </section>
     </div>
-
+    <!-- <p class="regional-name" style="padding-left: 140px; padding-top: 50px;">उजलोढ़ मिट्टी</p> -->
 
     <div class="cont" id = "mainstate">
     <section class="popular-localities">
-        <h2 class="abc">Select By Reigon/State</h2>
+        <h2 class="abc">Suitable Crops And Fertilizers (उपयुक्त फसलें और उर्वरक)</h2>
         <div class="locality-container">
-            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Cotton</h3><p class="regional-name">कपास</p><img src="/static/images/images2/cotton (1).jpg" alt="Image"></div>
-            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Millets</h3><p class="regional-name">मिलेट्स</p><img src="/static/images/images2/millet.png" alt="Image"></div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Paddy</h3><p class="regional-name">धान</p><img src="/static/images/images2/R (1).jpg" alt="Image"></div>
+            <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Wheat</h3><p class="regional-name">गेहूं</p><img src="/static/images/images2/wheat (1).jpg" alt="Image"></div>
             <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Sugarcane</h3><p class="regional-name">गन्ना</p><img src="/static/images/images2/sugercane (1) (1).jpg" alt="Image"></div>
             <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Urea</h3><p class="regional-name">यूरिया</p> <a href="https://www.tradeindia.com/products/urea-8119091.html" target="_blank"> <img src="/static/images/fertilizer/urea (1).jpg" alt="Image"> </a></div>
             <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>DAP</h3><p class="regional-name">डीएपी</p> <a href="https://www.mystore.in/en/product/dap-6" target="_blank"><img src="/static/images/fertilizer/dap (1).jpg" alt="Image"></a> </div>
@@ -560,13 +568,13 @@ header img {
 
     <div class="cont" id = "maincrop">
     <section class="popular-localities">
-        <h2 class="abc">Select By Crop</h2>
+        <h2 class="abc">Modern Farming Techniques (आधुनिक कृषि तकनीकें)</h2>
         <div class="locality-container">
             <div class="locality1" onclick="this.classList.add('bounce')">
                 <iframe 
         width="500" 
         height="260" 
-        src="https://www.youtube.com/embed/Wz6-4Gd7AyU?si=0tJItEkgHbf3AnEE" 
+        src="https://www.youtube.com/embed/7uE4A1XY5yg" 
         title="YouTube video player" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -576,7 +584,7 @@ header img {
             <div class="locality1" onclick="this.classList.add('bounce')"><iframe 
                 width="500" 
                 height="260" 
-                src="https://www.youtube.com/embed/kyODj-ovp4E?si=vW0qfWg-3GpscG-l" 
+                src="https://www.youtube.com/embed/zB_AFCoDlDg?si=gpBh-A8x8a0OSfma" 
                 title="YouTube video player" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -586,7 +594,7 @@ header img {
                 <iframe 
         width="500" 
         height="260" 
-        src="https://www.youtube.com/embed/HVDA9Eo4OwM?si=J-XTSHWYxA0Lef8Q" 
+        src="https://www.youtube.com/embed/Lzvld_ict9g?si=HtCVFMspkuP_vTnr" 
         title="YouTube video player" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -597,7 +605,7 @@ header img {
                 <iframe 
         width="500" 
         height="260" 
-        src="https://www.youtube.com/embed/RFnx5fgs5Ys?si=INW7VccoWGfkqXM-" 
+        src="https://www.youtube.com/embed/4CUYogghtnY?si=vGthv3NCsf4kprxY" 
         title="YouTube video player" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -630,7 +638,7 @@ header img {
 
 <div class="cont" id = "mainstate">
     <section class="popular-localities">
-        <h2 class="abc">Select By Reigon/State</h2>
+        <h2 class="abc">Modern Equipments (आधुनिक कृषि उपकरण)</h2>
         <div class="locality-container">
             <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Soil Cultivator</h3><p class="regional-name">₹58000</p> <a href="https://www.aajjo.com/product/shovel-type-red-manku-9-tynes-soil-cultivator-in-hanumangarh-manku-repairing-works" target="_blank"> <img src="/static/images/new_equipment/Soil-Cultivator-1500x1000 (1).jpg" alt="Image"> </a></div>
             <div class="locality1 locality" onclick="this.classList.add('bounce')"> <h3>Transplanter</h3><p class="regional-name">₹545000</p> <a href="https://www.aajjo.com/product/walking-type-shaktiman-rice-transplanter-paddy-ropak-637-for-agriculture-farming-in-mumbai-sabin-enterprises" target="_blank"><img src="/static/images/new_equipment/rice_transplanter (1).jpg" alt="Image"></a> </div>
@@ -648,7 +656,7 @@ header img {
 <footer id = "mainfooter">
     <div class="footer-container">
         <div class="footer-left">
-            <img src="/static/images/logo.jpg" alt="Logo">
+            <img src="/static/images/logo.png" alt="Logo">
         </div>
         <div class="footer-right">
             <a href="#">Contact Us</a>
@@ -658,10 +666,16 @@ header img {
         </div>
     </div>
 </footer>
-
-
-    <div class="fixed-image">
+<div class="fixed-image">
+    <button style="background-color: transparent; border: none;" class="uploadBtn" id="uploadBtn">
         <img src="/static/images/camera.png" alt="Floating Icon">
-    </div>
+    </button>
+    <input type="file" id="fileInput" style="display: none;" />
+</div>
+<script src="/static/js/script.js"></script>
+    <script>
+        document.querySelector(".stateName h3").innerText = sessionStorage.getItem("stateName")
+        document.querySelector(".stateName img").src = sessionStorage.getItem("statePic")
+    </script>
 </body>
 </html>
